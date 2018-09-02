@@ -4,7 +4,14 @@ install:
 	cd build &&        \
 	cmake .. &&        \
 	make
+
+rebuild:
+		@cd build &&       \
+		cmake .. &&        \
+		make
+
 clean:
 	@rm -rf build
+
 run:
 	@build/chapter_01_unittest
