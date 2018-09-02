@@ -6,12 +6,15 @@ install:
 	make
 
 rebuild:
-		@cd build &&       \
-		cmake .. &&        \
-		make
+	@cd build &&       \
+	cmake .. &&        \
+	make
 
 clean:
 	@rm -rf build
 
-run:
+test-all: rebuild
+	@cd build && make test
+
+test-details: rebuild
 	@build/chapter_01_unittest
