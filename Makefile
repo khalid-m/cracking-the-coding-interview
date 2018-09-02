@@ -13,8 +13,10 @@ rebuild:
 clean:
 	@rm -rf build
 
+# Runing cmake test
 test-all: rebuild
 	@cd build && make test
 
+# running executables
 test-details: rebuild
 	@build/chapter_01_unittest
