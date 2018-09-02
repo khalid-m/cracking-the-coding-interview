@@ -29,7 +29,9 @@ endif()
 
 include_directories(src/chapter_01)
 add_executable(
-        chapter_01
+        chapter_01_unittest
         src/chapter_01/problem_01_is_unique.cpp
         #src/chapter_01/problem_01_is_unique.h
+        test/chapter_01/problem_01_is_unique_unittest.cpp
 )
+target_link_libraries(chapter_01_unittest gtest gmock_main)

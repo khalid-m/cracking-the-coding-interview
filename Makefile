@@ -7,4 +7,4 @@ install:
 clean:
 	@rm -rf build
 run:
-	@build/chapter_01
+	@build/chapter_01_unittest
