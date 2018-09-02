@@ -35,3 +35,6 @@ add_executable(
         test/chapter_01/problem_01_is_unique_unittest.cpp
 )
 target_link_libraries(chapter_01_unittest gtest gmock_main)
+
+include(CTest)
+add_test(NAME chapter_01_unittest COMMAND chapter_01_unittest)
