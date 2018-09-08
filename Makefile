@@ -35,6 +35,7 @@ format-check:
 			diff temp_XMXZQT $$file ;                                    \
 			rm temp_XMXZQT ;                                             \
 	done
+	@cpplint $(ALL_SRCS)	
 	@# Now working
 	@#@find ./src ./test -type f \( -name '*.cpp' -o -name '*.h' \) \
   #-exec sh -c 'diff <(clang-format -style=google -verbose "$$0") "$$0" ' {} \;   # to Escape $, use $$
