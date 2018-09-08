@@ -27,13 +27,11 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
                         "${gmock_SOURCE_DIR}/include")
 endif()
 
-
+FILE (GLOB chapter_01_sources_and_tests src/chapter_01/*.cc  src/chapter_01/*.h test/chapter_01/*.cc)
 include_directories(src/chapter_01)
 add_executable(
         chapter_01_unittest
-        src/chapter_01/problem_01_is_unique.cc
-        #src/chapter_01/problem_01_is_unique.h
-        test/chapter_01/problem_01_is_unique_unittest.cc
+        ${chapter_01_sources_and_tests}
 )
 target_link_libraries(chapter_01_unittest gtest gmock_main)
 
